@@ -24,7 +24,7 @@ export function DialogContent({
       <DialogPrimitive.Content
         ref={ref}
         className={cn(
-          "fixed left-1/2 top-1/2 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-6 shadow-lg",
+          "fixed top-1/2 left-1/2 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-6 shadow-lg",
           className,
         )}
         {...props}
@@ -43,7 +43,7 @@ export function DialogTitle({ className, ref, ...props }: DialogTitleProps) {
   return (
     <DialogPrimitive.Title
       ref={ref}
-      className={cn("text-lg font-semibold text-brand-900", className)}
+      className={cn("text-brand-900 text-lg font-semibold", className)}
       {...props}
     />
   );
@@ -61,7 +61,7 @@ export function DialogDescription({
   return (
     <DialogPrimitive.Description
       ref={ref}
-      className={cn("mt-1 text-sm text-brand-600", className)}
+      className={cn("text-brand-600 mt-1 text-sm", className)}
       {...props}
     />
   );
