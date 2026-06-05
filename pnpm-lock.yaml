@@ -51,6 +51,21 @@ importers:
 
   packages/tailwind-config: {}
 
+  packages/types:
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      eslint:
+        specifier: ^10.4.1
+        version: 10.4.1
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
+
   packages/typescript-config: {}
 
 packages:
