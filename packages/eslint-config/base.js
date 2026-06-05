@@ -6,7 +6,15 @@ import globals from "globals";
 
 /** Shared base config for all TypeScript packages. */
 export const baseConfig = [
-  { ignores: ["dist/**", ".next/**", "node_modules/**", "storybook-static/**", "coverage/**"] },
+  {
+    ignores: [
+      "dist/**",
+      ".next/**",
+      "node_modules/**",
+      "storybook-static/**",
+      "coverage/**",
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
