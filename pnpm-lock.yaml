@@ -49,6 +49,8 @@ importers:
         specifier: ^10.4.1
         version: 10.4.1
 
+  packages/tailwind-config: {}
+
   packages/typescript-config: {}
 
 packages:
