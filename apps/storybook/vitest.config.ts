@@ -12,6 +12,5 @@ export default defineConfig({
       headless: true,
       instances: [{ browser: "chromium" }],
     },
-    setupFiles: [".storybook/vitest.setup.ts"],
   },
 });

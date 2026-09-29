@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "pnpm@11.5.2",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "build": "turbo run build",
@@ -15,13 +15,14 @@
     "test:e2e": "turbo run test:e2e",
     "format": "prettier --write \"**/*.{ts,tsx,js,mjs,json,md,css}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,mjs,json,md,css}\"",
+    "clean": "turbo run clean && rm -rf .turbo",
     "prepare": "husky"
   },
   "devDependencies": {
     "turbo": "^2.9.16",
     "typescript": "^6.0.3",
-    "prettier": "^3.8.3",
-    "prettier-plugin-tailwindcss": "^0.8.0",
+    "prettier": "3.8.3",
+    "prettier-plugin-tailwindcss": "0.8.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
     "@commitlint/cli": "^21.0.2",

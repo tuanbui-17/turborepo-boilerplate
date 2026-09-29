@@ -8,7 +8,8 @@
     "build": "storybook build -o storybook-static",
     "test": "vitest run",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf storybook-static .turbo"
   },
   "dependencies": {
     "@repo/ui": "workspace:*"

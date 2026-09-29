@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "clean": "rm -rf .turbo"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

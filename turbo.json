@@ -1,21 +1,42 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://turborepo.dev/schema.json",
   "ui": "tui",
   "tasks": {
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": [
         "dist/**",
         ".next/**",
         "!.next/cache/**",
+        "!.next/dev/**",
         "storybook-static/**"
       ]
     },
-    "dev": { "cache": false, "persistent": true },
-    "lint": { "dependsOn": ["^build"] },
-    "typecheck": { "dependsOn": ["^build"] },
-    "test": { "dependsOn": ["^build"] },
-    "test:e2e": { "dependsOn": ["^build"], "cache": false },
-    "format": { "cache": false }
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["transit"]
+    },
+    "typecheck": {
+      "dependsOn": ["transit"]
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "test:e2e": {
+      "dependsOn": ["^build"],
+      "cache": false
+    },
+    "format": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    }
   }
 }

@@ -12,7 +12,8 @@
   "scripts": {
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "clean": "rm -rf .turbo"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
