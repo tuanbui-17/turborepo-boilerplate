@@ -74,6 +74,8 @@ the updated `pnpm-lock.yaml`.
 ```bash
 corepack enable
 pnpm install
+cp apps/web-next/.env.example apps/web-next/.env
+cp apps/web-vite/.env.example apps/web-vite/.env
 pnpm dev
 ```
 
@@ -84,3 +86,23 @@ Dev servers:
 - `web-vite` → http://localhost:5173
 - `web-next` → http://localhost:3000
 - `storybook` → http://localhost:6006
+
+## Environment variables
+
+Each app that needs env vars has its own `.env.example` — copy it to `.env`
+in the same folder (`.env` and `*.local` are git-ignored). Values are not
+validated: a missing or wrong value shows up when the code that reads it runs.
+
+To add a variable:
+
+1. Add it to the app's `.env.example`. Browser-visible names need the
+   `NEXT_PUBLIC_` / `VITE_` prefix and are inlined into the bundle at build
+   time; never put secrets in those.
+2. Type it: `apps/web-next/env.d.ts` (`ProcessEnv`) or
+   `apps/web-vite/src/vite-env.d.ts` (`ImportMetaEnv`).
+3. Variables without that prefix: once code reads one, declare it in a
+   `turbo.json` inside the app (`"extends": ["//"]`), under `env` if it
+   changes the build output, under `passThroughEnv` if not. Turbo runs in
+   strict mode, so an undeclared variable is not passed to the task, and
+   `turbo/no-undeclared-env-vars` warns about it in lint. `NEXT_PUBLIC_*` /
+   `VITE_*` are picked up automatically.

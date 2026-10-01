@@ -7,6 +7,7 @@
     },
     "build": {
       "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [
         "dist/**",
         ".next/**",
@@ -26,7 +27,8 @@
       "dependsOn": ["transit"]
     },
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
     },
     "test:e2e": {
       "dependsOn": ["^build"],
