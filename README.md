@@ -52,6 +52,23 @@ turborepo-boilerplate/
 | `pnpm test`      | Run Vitest unit / component / story tests |
 | `pnpm format`    | Format with Prettier                      |
 
+## Adding dependencies
+
+Versions shared by more than one package live in the `catalog:` block of
+`pnpm-workspace.yaml` ([pnpm catalogs](https://pnpm.io/catalogs)).
+
+| Situation                                       | What to do                                                                                 |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Package is already in the catalog               | `pnpm add <pkg>@catalog: --filter <app>` — writes `"catalog:"`                             |
+| New package, used by one workspace package only | `pnpm add <pkg> --filter <app>` — the version stays in that `package.json`                 |
+| A second workspace package needs it             | Move the version into `catalog:` by hand, switch both `package.json` files to `"catalog:"` |
+| `peerDependencies`                              | Keep a wide range (e.g. `"react": "^19"`), never `catalog:`                                |
+
+Do not run a bare `pnpm add <pkg>` for a package that is already in the
+catalog: pnpm bumps the catalog entry to the latest version, which upgrades
+every package that uses it. After any change, run `pnpm install` and commit
+the updated `pnpm-lock.yaml`.
+
 ## Getting started
 
 ```bash
@@ -60,7 +77,7 @@ pnpm install
 pnpm dev
 ```
 
-Node 24 is pinned via `.nvmrc` (the workspace requires Node >= 20).
+Node 24 is pinned via `.nvmrc` (the workspace requires Node >= 22).
 
 Dev servers:
 

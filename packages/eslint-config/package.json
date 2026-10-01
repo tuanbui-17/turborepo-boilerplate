@@ -18,7 +18,7 @@
     "globals": "^17.6.0"
   },
   "devDependencies": {
-    "eslint": "^10.4.1"
+    "eslint": "catalog:"
   },
   "peerDependencies": {
     "eslint": "^10"

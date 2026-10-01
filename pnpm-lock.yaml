@@ -4,6 +4,39 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@tailwindcss/vite':
+      specifier: ^4.3.0
+      version: 4.3.0
+    '@types/react':
+      specifier: ^19.2.16
+      version: 19.2.16
+    '@types/react-dom':
+      specifier: ^19.2.3
+      version: 19.2.3
+    '@vitejs/plugin-react':
+      specifier: ^6.0.2
+      version: 6.0.2
+    eslint:
+      specifier: ^10.4.1
+      version: 10.4.1
+    react:
+      specifier: ^19.2.7
+      version: 19.2.7
+    react-dom:
+      specifier: ^19.2.7
+      version: 19.2.7
+    tailwindcss:
+      specifier: ^4.3.0
+      version: 4.3.0
+    typescript:
+      specifier: ^6.0.3
+      version: 6.0.3
+    vitest:
+      specifier: ^4.1.8
+      version: 4.1.8
+
 importers:
 
   .:
@@ -15,7 +48,7 @@ importers:
         specifier: ^21.0.2
         version: 21.0.2
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       husky:
         specifier: ^9.1.7
@@ -33,7 +66,7 @@ importers:
         specifier: ^2.9.16
         version: 2.9.16
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
 
   apps/storybook:
@@ -58,16 +91,16 @@ importers:
         specifier: ^10.4.2
         version: 10.4.2(@types/react-dom@19.2.3(@types/react@19.2.16))(@types/react@19.2.16)(esbuild@0.27.7)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(storybook@10.4.2(@testing-library/dom@10.4.1)(@types/react@19.2.16)(prettier@3.8.3)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@6.0.3)(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
       '@tailwindcss/vite':
-        specifier: ^4.3.0
+        specifier: 'catalog:'
         version: 4.3.0(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
       '@types/react':
-        specifier: ^19.2.16
+        specifier: 'catalog:'
         version: 19.2.16
       '@types/react-dom':
-        specifier: ^19.2.3
+        specifier: 'catalog:'
         version: 19.2.3(@types/react@19.2.16)
       '@vitejs/plugin-react':
-        specifier: ^6.0.2
+        specifier: 'catalog:'
         version: 6.0.2(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
       '@vitest/browser':
         specifier: ^4.1.8
@@ -76,28 +109,28 @@ importers:
         specifier: ^4.1.8
         version: 4.1.8(playwright@1.60.0)(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))(vitest@4.1.8)
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       playwright:
         specifier: ^1.60.0
         version: 1.60.0
       react:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7
       react-dom:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
       storybook:
         specifier: ^10.4.2
         version: 10.4.2(@testing-library/dom@10.4.1)(@types/react@19.2.16)(prettier@3.8.3)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       tailwindcss:
-        specifier: ^4.3.0
+        specifier: 'catalog:'
         version: 4.3.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
       vitest:
-        specifier: ^4.1.8
+        specifier: 'catalog:'
         version: 4.1.8(@types/node@24.13.0)(@vitest/browser-playwright@4.1.8)(jsdom@29.1.1)(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
 
   apps/web-next:
@@ -115,10 +148,10 @@ importers:
         specifier: ^16.2.7
         version: 16.2.7(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       react:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7
       react-dom:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
     devDependencies:
       '@repo/eslint-config':
@@ -137,19 +170,19 @@ importers:
         specifier: ^24.13.0
         version: 24.13.0
       '@types/react':
-        specifier: ^19.2.16
+        specifier: 'catalog:'
         version: 19.2.16
       '@types/react-dom':
-        specifier: ^19.2.3
+        specifier: 'catalog:'
         version: 19.2.3(@types/react@19.2.16)
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       tailwindcss:
-        specifier: ^4.3.0
+        specifier: 'catalog:'
         version: 4.3.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
 
   apps/web-vite:
@@ -164,10 +197,10 @@ importers:
         specifier: workspace:*
         version: link:../../packages/utils
       react:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7
       react-dom:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
     devDependencies:
       '@repo/eslint-config':
@@ -180,25 +213,25 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@tailwindcss/vite':
-        specifier: ^4.3.0
+        specifier: 'catalog:'
         version: 4.3.0(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
       '@types/react':
-        specifier: ^19.2.16
+        specifier: 'catalog:'
         version: 19.2.16
       '@types/react-dom':
-        specifier: ^19.2.3
+        specifier: 'catalog:'
         version: 19.2.3(@types/react@19.2.16)
       '@vitejs/plugin-react':
-        specifier: ^6.0.2
+        specifier: 'catalog:'
         version: 6.0.2(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       tailwindcss:
-        specifier: ^4.3.0
+        specifier: 'catalog:'
         version: 4.3.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
       vite:
         specifier: ^8.0.16
@@ -229,7 +262,7 @@ importers:
         version: 8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3)
     devDependencies:
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
 
   packages/tailwind-config: {}
@@ -243,10 +276,10 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
 
   packages/typescript-config: {}
@@ -279,31 +312,31 @@ importers:
         specifier: ^16.3.2
         version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.16))(@types/react@19.2.16)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@types/react':
-        specifier: ^19.2.16
+        specifier: 'catalog:'
         version: 19.2.16
       '@types/react-dom':
-        specifier: ^19.2.3
+        specifier: 'catalog:'
         version: 19.2.3(@types/react@19.2.16)
       '@vitejs/plugin-react':
-        specifier: ^6.0.2
+        specifier: 'catalog:'
         version: 6.0.2(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1
       react:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7
       react-dom:
-        specifier: ^19.2.7
+        specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
       vitest:
-        specifier: ^4.1.8
+        specifier: 'catalog:'
         version: 4.1.8(@types/node@24.13.0)(@vitest/browser-playwright@4.1.8)(jsdom@29.1.1)(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
 
   packages/utils:
@@ -315,13 +348,13 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       eslint:
-        specifier: ^10.4.1
+        specifier: 'catalog:'
         version: 10.4.1(jiti@2.7.0)
       typescript:
-        specifier: ^6.0.3
+        specifier: 'catalog:'
         version: 6.0.3
       vitest:
-        specifier: ^4.1.8
+        specifier: 'catalog:'
         version: 4.1.8(@types/node@24.13.0)(@vitest/browser-playwright@4.1.8)(jsdom@29.1.1)(vite@8.0.16(@types/node@24.13.0)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
 
 packages:
