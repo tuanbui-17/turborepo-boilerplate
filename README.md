@@ -20,6 +20,7 @@ git hooks wired up.
 | Lint / Format  | ESLint 10 flat config + Prettier (`prettier-plugin-tailwindcss`) |
 | Tests          | Vitest + Testing Library (+ Storybook story tests)               |
 | Git hooks      | Husky + lint-staged + commitlint (Conventional Commits)          |
+| CI             | GitHub Actions · Renovate for dependency updates                 |
 
 ## Architecture
 
@@ -106,3 +107,17 @@ To add a variable:
    strict mode, so an undeclared variable is not passed to the task, and
    `turbo/no-undeclared-env-vars` warns about it in lint. `NEXT_PUBLIC_*` /
    `VITE_*` are picked up automatically.
+
+## CI and dependency updates
+
+`.github/workflows/ci.yml` runs on every pull request and on pushes to
+`main`: `format:check`, then `turbo run lint typecheck test build`. The
+`.turbo/cache` folder is kept between runs with `actions/cache`, so no
+account or secret is needed. Running on `main` also fills the cache that
+new pull requests start from.
+
+Dependency updates come from [Renovate](https://docs.renovatebot.com/)
+(`renovate.json`): install the Renovate GitHub app on the repo. Every Monday
+it opens one PR with all minor/patch updates and one PR per major update,
+only for versions released at least 3 days ago. Dependabot is not used: it
+does not support pnpm 11 yet.
