@@ -30,13 +30,6 @@
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"]
     },
-    "test:e2e": {
-      "dependsOn": ["^build"],
-      "cache": false
-    },
-    "format": {
-      "cache": false
-    },
     "clean": {
       "cache": false
     }

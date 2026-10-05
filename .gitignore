@@ -5,7 +5,6 @@ dist/
 out/
 coverage/
 storybook-static/
-playwright-report/
 test-results/
 *.log
 .env
