@@ -4,7 +4,15 @@
     "config:recommended",
     "helpers:pinGitHubActionDigests",
     "group:allNonMajor",
-    "schedule:weekly"
+    "schedule:weekly",
+    ":maintainLockFilesWeekly"
   ],
-  "minimumReleaseAge": "3 days"
+  "minimumReleaseAge": "3 days",
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
+    }
+  ]
 }

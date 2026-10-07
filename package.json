@@ -2,7 +2,7 @@
   "name": "turborepo-boilerplate",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.28.3",
   "engines": {
     "node": ">=22"
   },
