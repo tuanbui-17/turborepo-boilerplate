@@ -75,12 +75,15 @@ the updated `pnpm-lock.yaml`.
 ```bash
 corepack enable
 pnpm install
+pnpm --filter storybook exec playwright install chromium
 cp apps/web-next/.env.example apps/web-next/.env
 cp apps/web-vite/.env.example apps/web-vite/.env
 pnpm dev
 ```
 
-Node 24 is pinned via `.nvmrc` (the workspace requires Node >= 22).
+Node 24 is pinned via `.nvmrc` (the workspace requires Node `^22.22.1 || >=24`).
+Playwright's Chromium is needed for the Storybook story tests (`pnpm test`); on
+a fresh Linux machine add `--with-deps` to install its system libraries.
 
 Dev servers:
 
@@ -91,8 +94,9 @@ Dev servers:
 ## Environment variables
 
 Each app that needs env vars has its own `.env.example` — copy it to `.env`
-in the same folder (`.env` and `*.local` are git-ignored). Values are not
-validated: a missing or wrong value shows up when the code that reads it runs.
+in the same folder (every `.env*` file except `.env.example` is git-ignored).
+Values are not validated: a missing or wrong value shows up when the code that
+reads it runs.
 
 To add a variable:
 

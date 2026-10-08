@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "pnpm@11.28.3",
   "engines": {
-    "node": ">=22"
+    "node": "^22.22.1 || >=24"
   },
   "scripts": {
     "build": "turbo run build",

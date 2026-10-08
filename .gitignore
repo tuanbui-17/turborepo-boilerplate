@@ -7,7 +7,9 @@ coverage/
 storybook-static/
 test-results/
 *.log
-.env
+.env*
+!.env.example
 *.local
 .DS_Store
 *.tsbuildinfo
+next-env.d.ts

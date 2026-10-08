@@ -20,7 +20,7 @@ export const baseConfig = [
   {
     languageOptions: { globals: { ...globals.node } },
     plugins: { turbo },
-    rules: { "turbo/no-undeclared-env-vars": "warn" },
+    rules: { "turbo/no-undeclared-env-vars": "error" },
   },
   prettier,
 ];
