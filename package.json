@@ -2,7 +2,7 @@
   "name": "turborepo-boilerplate",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@11.28.3",
+  "packageManager": "pnpm@11.28.9",
   "engines": {
     "node": "^22.22.1 || >=24"
   },
@@ -20,8 +20,8 @@
   "devDependencies": {
     "turbo": "^2.9.16",
     "typescript": "catalog:",
-    "prettier": "3.8.3",
-    "prettier-plugin-tailwindcss": "0.8.0",
+    "prettier": "3.9.10",
+    "prettier-plugin-tailwindcss": "0.8.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
     "@commitlint/cli": "^21.0.2",
